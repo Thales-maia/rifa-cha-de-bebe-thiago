@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#55713d">
+<title>Chá de Bebê do Thiago | Rifa Especial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">🍼 Um carinho para celebrar a chegada do Thiago</div>
+<header class="hero">
+  <nav><div class="brand"><span>✦</span> Chá do Thiago</div><a href="#participar">Participar</a></nav>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">RIFA ESPECIAL</div>
+      <h1>Uma pequena<br><em>chance,</em> uma grande celebração.</h1>
+      <p>Participe da rifa do Chá de Bebê do Thiago e concorra a <strong>R$ 500,00</strong>.</p>
+      <a class="btn primary" href="#participar">Escolher meus números <span>→</span></a>
+      <div class="trust"><span>✓ Pix automático</span><span>✓ Confirmação instantânea</span></div>
+    </div>
+    <div class="hero-bubbles" aria-hidden="true"><span>♡</span><span>✦</span><span>✧</span></div><div class="prize-card">
+      <div class="confetti">✦　·　✧　·　✦</div>
+      <div class="gift">🎁</div><span>PRÊMIO</span><strong>R$ 500</strong><small>,00</small>
+      <div class="divider"></div><p>R$ 35 por número</p><div id="countdown" style="margin-top:14px;font-size:12px;color:#55713d;font-weight:800">Sorteio em breve</div><p class="date">Sorteio · 02.11.2026</p>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+ <div><strong id="sold">—</strong><span>números pagos</span></div>
+ <div><strong id="available">—</strong><span>disponíveis</span></div>
+ <div><strong>R$ 500</strong><span>prêmio</span></div>
+</section>
+
+<main id="participar">
+<section class="section-head"><div><div class="eyebrow">01 · PARTICIPAÇÃO</div><h2>Escolha seus números</h2><p>Os números ficam reservados durante o pagamento.</p></div><div class="legend"><span><i class="free"></i>Disponível</span><span><i class="sel"></i>Selecionado</span><span><i class="taken"></i>Indisponível</span></div></section>
+
+<div class="numbers-wrap"><div id="numbers" class="numbers"></div></div>
+
+<div class="checkout-bar">
+ <div><span id="count">0 números selecionados</span><strong id="total">R$ 0,00</strong></div>
+ <button id="continue" class="btn primary" disabled>Continuar <span>→</span></button>
+</div>
+
+<section id="checkout" class="checkout-card hidden">
+ <div class="step">02 · SEUS DADOS</div>
+ <h2>Finalize sua participação</h2>
+ <p>Preencha seus dados para gerar seu Pix.</p>
+ <div class="selected-summary"><span>Seus números</span><strong id="summaryNumbers">—</strong></div>
+ <form id="form">
+   <label>Nome completo<input id="name" required placeholder="Como devemos identificar sua participação?"></label>
+   <label>WhatsApp<input id="phone" required inputmode="tel" placeholder="(11) 99999-9999"></label>
+   <button class="btn primary full">Gerar Pix seguro <span>→</span></button>
+ </form>
+ <div id="payment" class="payment hidden"></div>
+</section>
+</main>
+
+<section class="how"><div class="eyebrow">COMO FUNCIONA</div><h2>Simples, rápido e seguro.</h2><div class="steps">
+ <article><b>01</b><span>🎟️</span><h3>Escolha</h3><p>Selecione um ou mais números disponíveis.</p></article>
+ <article><b>02</b><span>💳</span><h3>Pague</h3><p>Receba um QR Code Pix exclusivo para sua reserva.</p></article>
+ <article><b>03</b><span>✨</span><h3>Confirme</h3><p>A confirmação acontece automaticamente após o pagamento.</p></article>
+</div></section>
+
+<section class="final"><div><div class="eyebrow">BOA SORTE! 🍀</div><h2>Vamos celebrar juntos a chegada do Thiago.</h2><p>Responsável: Thales · Sorteio em 02/11/2026</p></div><a href="#participar" class="btn light">Participar agora →</a></section>
+<footer>Chá de Bebê do Thiago · Rifa especial · 2026</footer>
+<script>
+(function(){
+ const target=new Date("2026-11-02T20:00:00-03:00");
+ const el=document.getElementById("countdown");
+ function tick(){const d=target-new Date();if(d<=0){el.textContent="É hoje! 🍀";return}const days=Math.floor(d/86400000),h=Math.floor(d%86400000/3600000),m=Math.floor(d%3600000/60000);el.textContent=`Sorteio em ${days}d ${h}h ${m}min`;requestAnimationFrame(()=>setTimeout(tick,1000))}
+ tick();
+})();
+</script><script src="app.js"></script>
+</body></html>
